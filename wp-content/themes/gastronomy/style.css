@@ -1,0 +1,54 @@
+/*!
+Theme Name: gastronomy
+Theme URI: bitbok123@gmail.com
+Author: bitbok123@gmail.com
+Author URI: bitbok123@gmail.com
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: gastronomy
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+gastronomy is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+html, body{
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 0px;
+}
+.navbar{
+	min-height: 70px;
+}
+.navbar ul img{
+	width: 38px;
+	height: 38px;
+}
+
+
+.worktime{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.worktime span{
+	width: 100%;
+}
+@media (min-width: 992px) {
+	#navbarSupportedContent{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+@media (max-width: 992px) {
+	.navbar{
+		min-height: auto;
+	}
+}
