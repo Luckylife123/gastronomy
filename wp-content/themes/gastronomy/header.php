@@ -16,11 +16,52 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory')?>/css/preloader.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory')?>/css/bootstrap.min.css">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<div class="preloader">
+	<div class="kart-loader">
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+		<div class="sheath">
+			<div class="segment"></div>
+		</div>
+	</div>
+</div>
 <header>
 	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
 		<a class="navbar-brand" href="<?php echo get_home_url()?>">Navbar</a>
