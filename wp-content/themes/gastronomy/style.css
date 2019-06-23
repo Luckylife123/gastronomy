@@ -19,20 +19,29 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+@font-face {
+	font-family: Museosanscyrl;
+	src: url(css/fonts/Museosanscyrl500.ttf);
+}
 html, body{
 	max-width: 1600px;
 	margin: 0 auto;
 	padding: 0px;
+	font-family: Museosanscyrl;
 }
-.navbar{
+header{
+	margin-bottom: 10px;
+}
+.navbar, header{
 	min-height: 70px;
 }
 .navbar ul img{
 	width: 38px;
 	height: 38px;
 }
-
-
+.navbar.bg-light{
+	background-color: #fff!important;
+}
 .worktime{
 	display: flex;
 	flex-direction: column;
@@ -41,14 +50,177 @@ html, body{
 .worktime span{
 	width: 100%;
 }
+.navbar-light .navbar-nav .nav-link{
+	color: #000;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+	color: #000!important;
+}
+.nav-link:hover{
+	background-color: #f7f7f7;
+}
+.navbar .phone{
+	color: #000;
+}
+.navbar .phone:hover{
+	color: #000;
+	text-decoration: none;
+}
+.home-categories{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.home-categories a{
+	flex-basis: 49%;
+	background-color: #f7f7f7;
+	margin-bottom: 10px;
+}
+.home-categories a img{
+	width: 100%;
+	height: auto;
+}
+.menu-footer ul{
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+.menu-footer ul li{
+	margin: 0px;
+	padding: 0px;
+}
+.menu-footer ul li a{
+	color: #000;
+	display: block;
+	padding: 10px;
+}
+.menu-footer ul li a:hover{
+	color: #000;
+	text-decoration: none;
+	background-color: #f7f7f7;
+}
+.woocommerce ul.products{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.woocommerce ul.products li{
+	flex-basis: 30%;
+	width: 30% !important;
+	margin-bottom: 10px;
+	margin-right: 0px;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__link{
+	display: flex;
+	flex-direction: column;
+	color: #000;
+	text-align: center;
+	transition: 0.3s;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__link:hover{
+	text-decoration: none;
+	opacity: 0.9;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__link img{
+	order: 2;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__link h2{
+	order: 1;
+	font-weight: 900;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__link span{
+	order: 4;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__link p{
+	order: 3;
+}
+.xoo-wsc-icon-checkmark.xoo-wsc-icon-atc, .added_to_cart.wc-forward{
+	display: none!important;
+}
+.woocommerce div.product{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.woocommerce div.product div.images.woocommerce-product-gallery{
+	flex-basis: 45%;
+}
+.woocommerce div.product div.summary{
+	flex-basis: 45%;
+}
+.woocommerce-tabs.wc-tabs-wrapper, .posted_in{
+	display: none;
+}
+footer{
+	border-top: 2px solid #000;
+}
+.woocommerce-cart table.cart img{
+	height: auto;
+}
+.woocommerce a.remove{
+	text-align: center!important;
+}
+.woocommerce .checkout-button{
+	text-align: right;
+}
+.checkout.woocommerce-checkout{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout{
+	flex-basis: 100%;
+}
+#customer_details{
+	flex-basis: 40%;
+}
+#order_review{
+	flex-basis: 55%;
+}
+#customer_details .col-1, #customer_details .col-2{
+	max-width: 100%;
+	flex: auto;
+}
+
+.woocommerce-billing-fields__field-wrapper p , .woocommerce-additional-fields__field-wrapper p{
+	 width: 100% !important;
+	 float: none!important;
+ }
+.woocommerce-billing-fields__field-wrapper span, .woocommerce-additional-fields__field-wrapper span{
+	width: 100%;
+	display: block;
+}
+.woocommerce-billing-fields__field-wrapper input, .woocommerce-additional-fields__field-wrapper textarea{
+	width: 100%;
+	padding: 5px 10px;
+	border: none;
+	border-bottom: 1px solid #000;
+}
+.woocommerce ul.products li{
+	border: 1px solid #f7f7f7;
+	border-radius: 5px;
+	padding: 15px;
+	transition: 0.6s;
+}
+.woocommerce ul.products li:hover{
+	border-color: #f5c81e;;
+}
+.related.products, .upsells {
+	width: 100%;
+}
+.woocommerce-cart table.cart img{
+	width: 100px!important;
+}
 @media (min-width: 992px) {
 	#navbarSupportedContent{
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 }
 @media (max-width: 992px) {
-	.navbar{
-		min-height: auto;
+	.navbar, header{
+		min-height: 56px;
 	}
 }

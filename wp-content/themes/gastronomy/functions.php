@@ -116,21 +116,7 @@ function gastronomy_widgets_init() {
 }
 add_action( 'widgets_init', 'gastronomy_widgets_init' );
 
-/**
- * Enqueue scripts and styles.
- */
-function gastronomy_scripts() {
-	wp_enqueue_style( 'gastronomy-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'gastronomy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'gastronomy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'gastronomy_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -174,3 +160,25 @@ add_action( 'after_setup_theme', 'customtheme_add_woocommerce_support' );
 
 
 add_filter('show_admin_bar', '__return_false');
+add_filter( 'woocommerce_cart_needs_shipping_address', '__return_false');
+
+function woocommmerce_style() {
+    wp_enqueue_style('woocommerce_stylesheet', WP_PLUGIN_URL. '/woocommerce/assets/css/woocommerce.css',false,'1.0',"all");
+}
+add_action( 'wp_head', 'woocommmerce_style' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function gastronomy_scripts() {
+    wp_enqueue_style( 'gastronomy-style', get_stylesheet_uri() );
+
+    wp_enqueue_script( 'gastronomy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+    wp_enqueue_script( 'gastronomy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'gastronomy_scripts' );
