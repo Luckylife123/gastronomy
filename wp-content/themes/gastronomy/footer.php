@@ -32,8 +32,13 @@
 				</li>
             <?php endforeach;?>
 		</ul>
+		<div class="footer-contacts">
+			<a href="mailto:<?php echo get_option( 'admin_email' ); ?>" target="_blank"><?php echo get_option( 'admin_email' ); ?></a>
+			<a href="tel:+380638050005">+380 63 80 50 005</a>
+		</div>
 	</div>
 </footer>
+</div>
 <?php wp_footer(); ?>
 <script src="<?php bloginfo('template_directory')?>/js/bootstrap.min.js"></script>
 <script src="<?php bloginfo('template_directory')?>/js/js.js"></script>
