@@ -24,13 +24,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	src: url(css/fonts/Museosanscyrl500.ttf);
 }
 html, body{
-	max-width: 1600px;
 	margin: 0 auto;
 	padding: 0px;
 	font-family: Museosanscyrl;
 }
 header{
 	margin-bottom: 10px;
+}
+.workcircle.no{
+	border-radius: 100%;
+	border: 5px solid #BD1D1C;
+}
+.workcircle.yes{
+	border-radius: 100%;
+	border: 5px solid #77BA1F;
 }
 .navbar, header{
 	min-height: 70px;
@@ -46,9 +53,15 @@ header{
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	margin-left: 20px;
 }
 .worktime span{
 	width: 100%;
+}
+.work{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .navbar-light .navbar-nav .nav-link{
 	color: #000;
@@ -213,14 +226,54 @@ footer{
 .woocommerce-cart table.cart img{
 	width: 100px!important;
 }
-@media (min-width: 992px) {
+.woocommerce ul.products li.product .button, .woocommerce button.button.alt, .woocommerce button.button.alt:hover
+{
+	background-color: #000!important;
+	text-align: center;
+	color: #fff;
+}
+@media (min-width: 991px) {
 	#navbarSupportedContent{
 		display: flex;
 		justify-content: space-around;
 	}
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 	.navbar, header{
 		min-height: 56px;
+	}
+	.work{
+		justify-content: flex-start;
+	}
+	.worktime{
+		margin-right: 20px;
+		order: 1;
+		margin-left: 0px;
+	}
+	.workcircle{
+		order: 2;
+	}
+}
+@media (max-width: 768px) {
+	table.shop_table_responsive tr td:before{
+		display: none;
+	}
+	.woocommerce-cart table.cart td{
+		text-align: center;
+	}
+	.woocommerce ul.products li{
+		flex-basis: 100%;
+	}
+	.woocommerce div.product div.images.woocommerce-product-gallery{
+		flex-basis: 100%;
+	}
+	.woocommerce div.product div.summary{
+		flex-basis: 100%;
+	}
+	.home-categories a{
+		flex-basis: 100%;
+	}
+	#customer_details, #order_review{
+		flex-basis: 100%;
 	}
 }

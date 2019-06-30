@@ -92,9 +92,14 @@
                 <?php endforeach;?>
 			</ul>
 			<a class="phone" href="tel:+380638050005">+380 63 80 50 005</a>
-			<div class="worktime">
-				<span> працюємо Пн-Нд </span>
-				<span>з 11:00 до 23:00</span>
+			<?php date_default_timezone_set('Europe/Kiev');
+                  $time = date('H');?>
+			<div class="work">
+				<div class="workcircle <?php if(($time >= 11) && ($time < 23)): echo "yes"; else: echo "no";endif;?>"></div>
+				<div class="worktime">
+					<span> працюємо Пн-Нд </span>
+					<span>з 11:00 до 23:00</span>
+				</div>
 			</div>
 		</div>
 	</nav>
