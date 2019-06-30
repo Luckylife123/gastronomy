@@ -226,7 +226,7 @@ footer{
 .woocommerce-cart table.cart img{
 	width: 100px!important;
 }
-.woocommerce ul.products li.product .button, .woocommerce button.button.alt, .woocommerce button.button.alt:hover
+.woocommerce ul.products li.product .button, .woocommerce button.button.alt, .woocommerce button.button.alt:hover,.woocommerce a.button.alt
 {
 	background-color: #000!important;
 	text-align: center;
